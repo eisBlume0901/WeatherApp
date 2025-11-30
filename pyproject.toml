@@ -1,0 +1,10 @@
+[project]
+name = "weatherapp"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = [
+    "django>=5.2.8",
+    "django-environ>=0.12.0",
+    "requests>=2.32.5",
+]
