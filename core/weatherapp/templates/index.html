@@ -10,6 +10,30 @@
         transform-origin: center;
         will-change: transform;
         }
+
+        @keyframes sway {
+            0%   { transform: rotate(-3deg); }
+            50%  { transform: rotate(3deg); }
+            100% { transform: rotate(-3deg); }
+        }
+
+        .card svg {
+            display: block;              /* center properly when rotating */
+            transform-origin: center;
+            will-change: transform;
+            transition: transform 180ms; /* keeps transitions smooth when animation stops */
+        }
+
+        .card:hover svg {
+            animation: sway 800ms ease-in-out infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .card:hover svg {
+            animation: none;
+            transform: none;
+            }
+        }
     </style>
   </head>
   <body class="bg-zinc-900">
